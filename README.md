@@ -57,8 +57,8 @@ Ontop of that it also has feature to filter and sort Personal Details based on A
       
 <h2>Requirements.txt</h2>
   &emsp;- python-3.8.10 <br>
-  &emsp;- django-4.0.4 <br>
-  &emsp;- rest_framework-3.13.1 <br>
+  &emsp;- django-4.0.4 <code> pip install django==4.0.4</code> <br>
+  &emsp;- rest_framework-3.13.1 <code> pip install restframework </code> <br>
   
   
 <h2>Run API</h2>
