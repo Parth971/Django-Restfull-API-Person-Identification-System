@@ -64,8 +64,8 @@ Ontop of that it also has feature to filter and sort Personal Details based on A
   
 <h2>Run API</h2>
   &emsp; 1. Install Requirement.txt <br>
-  &emsp; 2. Run this Django API via ```python manage.py runserver```
-  &emsp; 3. Open POSTman (Used for request and response analysis)
+  &emsp; 2. Run this Django API via <code>python manage.py runserver</code> <br>
+  &emsp; 3. Open POSTman (Used for request and response analysis) <br>
 
 <h2>Endoints</h2>
 &emsp; /api/users/user_id/ <br>
@@ -75,7 +75,7 @@ Ontop of that it also has feature to filter and sort Personal Details based on A
 &emsp; /api/aadhar/ <br>
 &emsp; /api/aadhar/aadhar_no/ <br>
 &emsp; /api/aadhar/aadhar_no/address/ <br>
-&emsp; /api/aadhar/aadhar_no/address/<int:address_id>/ <br>
+&emsp; /api/aadhar/aadhar_no/address/<int:address_id>/<br>
 &emsp; /api/aadhar/aadhar_no/qualification/ <br>
 &emsp; /api/aadhar/aadhar_no/bank/ <br>
 &emsp; /api/aadhar/aadhar_no/personal_detail/ <br>
