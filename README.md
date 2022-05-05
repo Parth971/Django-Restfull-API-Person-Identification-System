@@ -64,26 +64,92 @@ Ontop of that it also has feature to filter and sort Personal Details based on A
   
 <h2>Run API</h2>
   &emsp; 1. Install Requirement.txt <br>
-  &emsp; 2. Run this Django API via <code>python manage.py runserver</code> <br>
+  &emsp; 2. Run this Django API via <code>python manage.py runserver</code> <br> 
+  &emsp;(Default superuser username: <strong>admin</strong>, pass: <strong>admin123</strong>) <br>
   &emsp; 3. Open POSTman (Used for request and response analysis) <br>
 
 <h2>Endoints</h2>
-&emsp; /api/users/user_id/ <br>
-&emsp; /api/signup/ <br>
-&emsp; /api/signin/ <br>
-&emsp; /api/signout/ <br>
-&emsp; /api/aadhar/ <br>
-&emsp; /api/aadhar/aadhar_no/ <br>
-&emsp; /api/aadhar/aadhar_no/address/ <br>
-&emsp; /api/aadhar/aadhar_no/address/<int:address_id>/<br>
-&emsp; /api/aadhar/aadhar_no/qualification/ <br>
-&emsp; /api/aadhar/aadhar_no/bank/ <br>
-&emsp; /api/aadhar/aadhar_no/personal_detail/ <br>
-&emsp; /api/aadhar/aadhar_no/personal_detail/contact/ <br>
-&emsp; /api/aadhar/aadhar_no/personal_detail/contact/contact_id/ <br>
-&emsp; /api/aadhar/aadhar_no/personal_detail/email/ <br>
-&emsp; /api/aadhar/aadhar_no/personal_detail/email/email_id/ <br>
-&emsp; /api/aadhar/aadhar_no/past_job_experience/ <br>
-&emsp; /api/personal_details/ <br>
-  
-  
+&emsp; [POST] Reqires: token | [user_id] in url, [role] in request body <br>
+&emsp; <code>/api/users/user_id/ </code> <br> 
+&emsp; [POST] Reqires: [username, email, password1, password2] in request body <br>
+&emsp; <code>/api/signup/ </code> <br> 
+&emsp; [POST] Reqires: [username, password] in request body <br>
+&emsp; <code>/api/signin/ </code> <br> 
+&emsp; [GET] Reqires: token <br>
+&emsp; <code>/api/signout/ </code> <br> 
+&emsp; [GET] Reqires: token <br>
+&emsp; <code>/api/aadhar/ </code> <br> 
+&emsp; [POST] Reqires: token | [aadhar_no, is_active] in request body <br>
+&emsp; <code>/api/aadhar/ </code> <br> 
+&emsp; [GET] Reqires: token | [aadhar_no] in url <br>
+&emsp; <code>/api/aadhar/aadhar_no/ </code> <br> 
+&emsp; [PATCH] Reqires: token | [aadhar_no] in url, [is_active] in request body <br>
+&emsp; <code>/api/aadhar/aadhar_no/ </code> <br> 
+&emsp; [DELETE] Reqires: token | [aadhar_no] in url <br>
+&emsp; <code>/api/aadhar/aadhar_no/ </code> <br> 
+&emsp; [GET] Reqires: token | [aadhar_no] in url <br>
+&emsp; <code>/api/aadhar/aadhar_no/address/ </code> <br> 
+&emsp; [POST] Reqires: token | [aadhar_no] in url, [street, city, state, postal_code] in request body <br>
+&emsp; <code>/api/aadhar/aadhar_no/address/ </code> <br> 
+&emsp; [GET] Reqires: token | [aadhar_no, address_id] in url <br>
+&emsp; <code>/api/aadhar/aadhar_no/address/address_id/</code> <br> 
+&emsp; [PATCH] Reqires: token | [aadhar_no, address_id] in url, [street, city, state, postal_code] in request body <br>
+&emsp; <code>/api/aadhar/aadhar_no/address/address_id/</code> <br> 
+&emsp; [DELETE] Reqires: token | [aadhar_no, address_id] in url<br>
+&emsp; <code>/api/aadhar/aadhar_no/address/address_id/</code> <br> 
+&emsp; [GET] Reqires: token | [aadhar_no] in url <br>
+&emsp; <code>/api/aadhar/aadhar_no/qualification/ </code> <br> 
+&emsp; [POST] Reqires: token | [aadhar_no] in url, [institute_name, passing_year, percentage] in request body <br>
+&emsp; <code>/api/aadhar/aadhar_no/qualification/ </code> <br> 
+&emsp; [PATCH] Reqires: token | [aadhar_no] in url, [institute_name, passing_year, percentage] in request body <br>
+&emsp; <code>/api/aadhar/aadhar_no/qualification/ </code> <br> 
+&emsp; [DELETE] Reqires: token | [aadhar_no] in url <br>
+&emsp; <code>/api/aadhar/aadhar_no/qualification/ </code> <br> 
+&emsp; [GET] Reqires: token | [aadhar_no] in url<br>
+&emsp; <code>/api/aadhar/aadhar_no/bank/ </code> <br> 
+&emsp; [POST] Reqires: token | [aadhar_no] in url, [account_number, bank_name, ifsc_code] in request body <br>
+&emsp; <code>/api/aadhar/aadhar_no/bank/ </code> <br> 
+&emsp; [PATCH] Reqires: token | [aadhar_no] in url, [account_number, bank_name, ifsc_code] in request body <br>
+&emsp; <code>/api/aadhar/aadhar_no/bank/ </code> <br> 
+&emsp; [DELETE] Reqires: token | [aadhar_no] in url <br>
+&emsp; <code>/api/aadhar/aadhar_no/bank/ </code> <br> 
+&emsp; [GET] Reqires: token | [aadhar_no] in url<br>
+&emsp; <code>/api/aadhar/aadhar_no/personal_detail/ </code> <br> 
+&emsp; [POST] Reqires: token | [aadhar_no] in url, [full_name, dob, blood_group] in request body <br>
+&emsp; <code>/api/aadhar/aadhar_no/personal_detail/ </code> <br> 
+&emsp; [PATCH] Reqires: token | [aadhar_no] in url, [full_name, dob, blood_group] in request body <br>
+&emsp; <code>/api/aadhar/aadhar_no/personal_detail/ </code> <br> 
+&emsp; [DELETE] Reqires: token | [aadhar_no] in url <br>
+&emsp; <code>/api/aadhar/aadhar_no/personal_detail/ </code> <br> 
+&emsp; [GET] Reqires: token | [aadhar_no] in url <br>
+&emsp; <code>/api/aadhar/aadhar_no/personal_detail/contact/ </code> <br> 
+&emsp; [POST] Reqires: token | [aadhar_no] in url, [contact] in request body <br>
+&emsp; <code>/api/aadhar/aadhar_no/personal_detail/contact/ </code> <br> 
+&emsp; [GET] Reqires: token | [aadhar_no, contact_id] in url <br>
+&emsp; <code>/api/aadhar/aadhar_no/personal_detail/contact/contact_id/ </code> <br> 
+&emsp; [PATCH] Reqires: token | [aadhar_no, contact_id] in url, [contact] in request body <br>
+&emsp; <code>/api/aadhar/aadhar_no/personal_detail/contact/contact_id/ </code> <br> 
+&emsp; [DELETE] Reqires: token | [aadhar_no, contact_id] in url<br>
+&emsp; <code>/api/aadhar/aadhar_no/personal_detail/contact/contact_id/ </code> <br> 
+&emsp; [GET] Reqires: token | [aadhar_no] in url <br>
+&emsp; <code>/api/aadhar/aadhar_no/personal_detail/email/ </code> <br> 
+&emsp; [POST] Reqires: token | [aadhar_no] in url, [email] in request body <br>
+&emsp; <code>/api/aadhar/aadhar_no/personal_detail/email/ </code> <br> 
+&emsp; [GET] Reqires: token | [aadhar_no, email_id] in url <br>
+&emsp; <code>/api/aadhar/aadhar_no/personal_detail/email/email_id/ </code> <br> 
+&emsp; [PATCH] Reqires: token | [aadhar_no, email_id] in url, [email] in request body <br>
+&emsp; <code>/api/aadhar/aadhar_no/personal_detail/email/email_id/ </code> <br> 
+&emsp; [DELETE] Reqires: token | [aadhar_no, email_id] in url<br>
+&emsp; <code>/api/aadhar/aadhar_no/personal_detail/email/email_id/ </code> <br> 
+&emsp; [GET] Reqires: token | [aadhar_no] in url<br>
+&emsp; <code>/api/aadhar/aadhar_no/past_job_experience/ </code> <br> 
+&emsp; [POST] Reqires: token | [aadhar_no] in url, [company_name, job_role, year_of_work_experience] in request body <br>
+&emsp; <code>/api/aadhar/aadhar_no/past_job_experience/ </code> <br> 
+&emsp; [PATCH] Reqires: token | [aadhar_no] in url, [company_name, job_role, year_of_work_experience] in request body <br>
+&emsp; <code>/api/aadhar/aadhar_no/past_job_experience/ </code> <br> 
+&emsp; [DELETE] Reqires: token | [aadhar_no] in url <br>
+&emsp; <code>/api/aadhar/aadhar_no/past_job_experience/ </code> <br> 
+&emsp; [GET] Reqires: token | [is_active(True, False), aadhar_no, sort(descending, default=ascending)] in url <br>
+&emsp; <code>/api/personal_details/ </code> <br> 
+&emsp; [POST] Reqires: [username, password] in body <br>
+&emsp; <code>/api-token-auth/ </code> <br> 
