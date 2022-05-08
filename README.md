@@ -1,8 +1,8 @@
 <h1>Django Restfull API</h1>
 
-This is Django Restfull API for Person Identification based on Aadhar Number. <br>
+This is Django Restful API for Person Identification based on Aadhar Number. <br>
 Basically, this api helps in creating Aadhar card and Related details. <br>
-Ontop of that it also has feature to filter and sort Personal Details based on Aadhar number and its active status.
+On top of that it also has feature to filter and sort Personal Details based on Aadhar number and its active status.
 
 <h2>REQUIREMENTS: Person Identification System</h2>
 
